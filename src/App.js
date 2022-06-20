@@ -15,7 +15,7 @@ function App() {
   const user = useSelector(selectUser);
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
-      console.log("user is: ", authUser);
+      console.log("user is yumyum: ", authUser);
       if (authUser) {
         dispatch(
           login({
@@ -23,7 +23,8 @@ function App() {
             photo: authUser.photoURL,
             email: authUser.email,
             displayName: authUser.displayName,
-          }))
+          })
+        );
       } else {
         dispatch(logout());
       }

@@ -19,7 +19,7 @@
 }
 
 .chat_input>form>input {
-    padding: 15px;
+    /* padding: 15px; */
     background: transparent;
     border: none;
     outline-width: 0;
@@ -43,4 +43,14 @@
 
 .chat_messages {
     flex: 1;
+    overflow: scroll;
+}
+
+.chat_messages::-webkit-scrollbar {
+    display: none;
+}
+
+.chat_messages {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
